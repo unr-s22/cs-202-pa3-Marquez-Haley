@@ -8,7 +8,9 @@ class Money {
 		int cents;
 
 	public:
-
+		explicit Money();
+		explicit Money(const int newDollars, int newCents);
+		bool operator== (const Money &m);
 
 
 
