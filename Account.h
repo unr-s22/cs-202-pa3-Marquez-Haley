@@ -3,27 +3,16 @@
 #include <iostream>
 #include "Money.h"
 
-class Account{
+class Account:public Money{
 public:
-    int dollars;
-    int cents;
-    Account(){
-        Money(int x,int y);
-        dollars=x;
-        cents=y;
+    Account(int x,int y){
+        int balance=0;
+        balance=Money(x,y);
     }
 
-    void makeDeposit(Money(int x,int y));
+    void makeDeposit(Money(int ,int));
 
-    void makeWithdrawals(Money(int x,int y));
+    void makeWithdrawals(Money(int ,int));
 };
-
-
-
-
-
-
-
-
 
 #endif
