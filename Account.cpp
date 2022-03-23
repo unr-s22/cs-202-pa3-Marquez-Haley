@@ -10,7 +10,7 @@ you can declare these in the .h file
 */
 void makeDeposit(){
     std::cout << "How much money do you want to deposit: ";
-    std::cin >> dollars.cents; //you can use the all_money integer i created so its easier so Money.all_money
+    std::cin >> dollars.cents; //you can use the all_cents integer i created so its easier so Money.all_cents
     Money.push_back (Money(dollars.cents));
     balanceUpdate=true;
 }

@@ -4,55 +4,55 @@ Money::Money(){}
 
 Money::Money(const int newDollars, int newCents):
 dollars{newDollars}, cents{newCents}{
-	setAllMoney();
+	setAllCents();
 }
 
-int Money::setAllMoney(){
-	all_money = (dollars * 100) + cents;
+int Money::setAllCents(){
+	all_cents = (dollars * 100) + cents;
 }
 
 bool Money::operator == (const Money &rhs){	
-	return all_money == rhs.all_money;
+	return all_cents == rhs.all_cents;
 }
 
 bool Money::operator != (const Money &rhs){
-	return !(all_money == rhs.all_money);
+	return !(all_cents == rhs.all_cents);
 }
 
 bool Money::operator < (const Money &rhs){
-	return all_money < rhs.all_money;
+	return all_cents < rhs.all_cents;
 }
 
 bool Money::operator > (const Money &rhs){
-	return all_money > rhs.all_money;
+	return all_cents > rhs.all_cents;
 }
 
 bool Money::operator >= (const Money &rhs){
-	return all_money > rhs.all_money || all_money == rhs.all_money;
+	return all_cents > rhs.all_cents || all_cents == rhs.all_cents;
 }
 
 bool Money::operator <= (const Money &rhs){
-	return all_money < rhs.all_money || all_money == rhs.all_money;
+	return all_cents < rhs.all_cents || all_cents == rhs.all_cents;
 }
 	
 Money Money::operator + (const Money &rhs){
 
 	Money sum;
-	sum.all_money = all_money + rhs.all_money;
+	sum.all_cents = all_cents + rhs.all_cents;
 	return sum;
 }
 
 Money Money::operator - (const Money &rhs){
 
 	Money diff;
-	diff.all_money = all_money - rhs.all_money;
+	diff.all_cents = all_cents - rhs.all_cents;
 	
 	return diff;
 }
 
 std::ostream& operator << (std::ostream &out, const Money &m){
 
-	out << "$" << (m.all_money * 0.01) << std::endl;
+	out << "$" << (m.all_cents * 0.01) << std::endl;
 	return out;
 }
 	
