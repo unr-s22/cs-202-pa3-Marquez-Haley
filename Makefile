@@ -1,5 +1,5 @@
-pa3: main.cpp Money.o
-	g++ -std=c++11 -o pa3 main.cpp Money.o
+pa3: main.cpp Money.o Account.o
+	g++ -std=c++11 -o pa3 main.cpp Money.o Account.o
 
 Account.o: Account.cpp Account.h
 	g++ -std=c++11 -c Account.cpp
