@@ -7,8 +7,12 @@ dollars{newDollars}, cents{newCents}{
 	setAllCents();
 }
 
-int Money::setAllCents(){
+void Money::setAllCents(){
 	all_cents = (dollars * 100) + cents;
+}
+
+int Money::getAllCents() const {
+	return all_cents;
 }
 
 bool Money::operator == (const Money &rhs){	

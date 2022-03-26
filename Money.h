@@ -11,7 +11,8 @@ class Money {
 	public:
 		explicit Money();
 		explicit Money(const int newDollars, int newCents);
-		int setAllCents();
+		void setAllCents();
+		int getAllCents() const;
 		bool operator == (const Money &rhs);
 		bool operator != (const Money &rhs);
 		bool operator < (const Money &rhs);

@@ -3,26 +3,27 @@
 #include <iostream>
 #include "Money.h"
 #include <vector>
+#include <numeric>
+#include <sstream>
 
-class Account : public Money{
-    Money m;
+class Account {
+
 private:
-    bool balanceUpdate = false;
-    std::vector<int> deposits;
-    std::vector<int> withdrawals;
-    std::vector<int> money;
-    int dollars=0, cents=0, balance=0;
-    int numOfDeposits=0, numOfWithdrawals=0;
+	Money money;
+	bool balanceUpdate = false;
+	std::vector<Money> deposits;
+	std::vector<Money> withdrawals;
+	std::string accountToString();
 public:
-    Account(int x,int y){
-        balance=Money(x,y); //Don't know what to do here
-    }
+    Account(const Money m);
 
-    void makeDeposit(Money(int ,int));
+    void makeDeposit(Money money);
 
-    void makeWithdrawals(Money(int ,int));
+    void makeWithdrawals(Money money);
 
-    void account();
+	void recalculateBalance(Money money);
+
+    friend std::ostream &operator << (std::ostream &out, Account &account);
 };
 
 #endif
