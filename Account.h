@@ -14,6 +14,7 @@ private:
 	std::vector<Money> deposits;
 	std::vector<Money> withdrawals;
 	std::string accountToString();
+    Money balance = Money(0,0);
 public:
     Account(const Money m);
 

@@ -10,14 +10,15 @@ void Account::makeDeposit(Money money){
 }
 
 void Account::makeWithdrawals(Money money){
-//add what I did in make deposits function
+    withdrawals.push_back(money);
+    balanceUpdate = true;
 }
 
 void Account::recalculateBalance(Money money){
 	if (balanceUpdate == true){
 	auto sum_deposits = std::accumulate(deposits.begin(), deposits.end(), money);
 	auto sum_withdrawals = std::accumulate(withdrawals.begin(), withdrawals.end(), money);
-	money = (money + sum_deposits - sum_withdrawals);
+    balance = (balance + sum_deposits - sum_withdrawals);
 	}
 }
 
@@ -25,14 +26,18 @@ std::string Account::accountToString(){
 	std::stringstream s;
 	s << "Account Details" << std::endl;
 	s << "--------------------------" << std::endl;
-	s << "Balance: " << money << std::endl;
+	s << "Balance: " << balance << std::endl;
 	s << "Number of Deposits: " << deposits.size() << std::endl;
 	s << "--------------------------" << std::endl;
 	for (int i = 0; i < deposits.size(); i++){
 		s << "(" << i + 1 << ")" << deposits[i] << std::endl;
 	}
 	s << "--------------------------" << std::endl;
-	//add the withdrawls part
+    s << "Number of Withdrawals: " << withdrawals.size() << std::endl;
+    s << "--------------------------" << std::endl;
+    for (int i = 0; i < withdrawals.size(); i++){
+        s << "(" << i + 1 << ")" << withdrawals[i] << std::endl;
+    }
 	return s.str();
 }
 
