@@ -14,7 +14,6 @@ private:
 	std::vector<Money> deposits;
 	std::vector<Money> withdrawals;
 	std::string accountToString();
-    Money balance = Money(0,0);
 public:
     Account(const Money m);
 
@@ -22,7 +21,7 @@ public:
 
     void makeWithdrawals(Money money);
 
-	void recalculateBalance(Money money);
+	Money recalculateBalance(Money money);
 
     friend std::ostream &operator << (std::ostream &out, Account &account);
 };
