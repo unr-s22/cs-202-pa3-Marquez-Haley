@@ -5,7 +5,7 @@
 
 int main(){
 	Money m(300,23);
-	Money d1(200,00);
+	Money d1(200,60);
 	Money d2(300,24);
 	Money d3(501,22);
 	Money w1(300,10);
