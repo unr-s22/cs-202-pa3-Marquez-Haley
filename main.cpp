@@ -36,31 +36,31 @@ int main(){
     }
 
     if (m > d1){
-        std::cout << "The starting balance is greater then the deposit." << std::endl;
+        std::cout << "The starting balance is greater than the deposit." << std::endl;
     }
     else {
-        std::cout << "The starting balance is not greater then the deposit." << std::endl;
+        std::cout << "The starting balance is not greater than the deposit." << std::endl;
     }
 
     if (m < d1){
-        std::cout << "The deposit is greater then the starting balance." << std::endl;
+        std::cout << "The deposit is greater than the starting balance." << std::endl;
     }
     else {
-        std::cout << "The deposit is not greater then the starting balance." << std::endl;
+        std::cout << "The deposit is not greater than the starting balance." << std::endl;
     }
 
     if (m <= d1){
-        std::cout << "The deposit is greater then or equal to the starting balance." << std::endl;
+        std::cout << "The deposit is greater than or equal to the starting balance." << std::endl;
     }
     else {
-        std::cout << "The deposit is not greater then or equal to the starting balance." << std::endl;
+        std::cout << "The deposit is not greater than or equal to the starting balance." << std::endl;
     }
 
     if (m >= d1){
-        std::cout << "The starting balance is greater then or equal to the deposit." << std::endl;
+        std::cout << "The starting balance is greater than or equal to the deposit." << std::endl;
     }
     else {
-        std::cout << "The starting balance is not greater then or equal to the deposit." << std::endl;
+        std::cout << "The starting balance is not greater than or equal to the deposit." << std::endl;
     }
 
 	return 0;
