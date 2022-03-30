@@ -47,3 +47,5 @@ std::ostream &operator << (std::ostream &out, Account &account){
 	return out;
 }
 
+Account::~Account(){}
+

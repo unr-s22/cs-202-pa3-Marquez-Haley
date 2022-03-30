@@ -21,9 +21,11 @@ public:
 
     void makeWithdrawals(Money money);
 
-	Money recalculateBalance(Money money);
+    Money recalculateBalance(Money money);
 
     friend std::ostream &operator << (std::ostream &out, Account &account);
+	
+    virtual ~Account();
 };
 
 #endif

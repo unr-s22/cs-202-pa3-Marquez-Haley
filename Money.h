@@ -22,7 +22,7 @@ class Money {
 		Money operator + (const Money &rhs);
 		Money operator - (const Money &rhs);
 		friend std::ostream& operator << (std::ostream &out, const Money &m);
-
+		virtual ~Money();
 
 
 };

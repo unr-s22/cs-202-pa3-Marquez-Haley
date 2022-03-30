@@ -59,6 +59,7 @@ std::ostream& operator << (std::ostream &out, const Money &m){
 	out << "$" << (m.all_cents * 0.01) << std::endl;
 	return out;
 }
-	
+
+Money::~Money(){}
 
 
